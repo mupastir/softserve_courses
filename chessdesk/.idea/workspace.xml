@@ -10,7 +10,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/chessdesk$Unittests_in_test_chessdesk_py.coverage" NAME="Unittests in test_chessdesk.py Coverage Results" MODIFIED="1556747696116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/chessdesk$Unittests_in_test_chessdesk_py.coverage" NAME="Unittests in test_chessdesk.py Coverage Results" MODIFIED="1557088810803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/chessdesk$Unittests_for_test_chessdesk_TestChessdesk.coverage" NAME="Unittests for test_chessdesk.TestChessdesk Coverage Results" MODIFIED="1556870022041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/chessdesk$test.coverage" NAME="test Coverage Results" MODIFIED="1556749247608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/chessdesk$Unittests_for_test_chessdesk_TestChessdesk_test_given_args_not_nums.coverage" NAME="Unittests for test_chessdesk.TestChessdesk.test_given_args_not_nums Coverage Results" MODIFIED="1556870768801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -21,8 +21,8 @@
       <file leaf-file-name="chessdesk.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chessdesk.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="570">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
         </entry>
@@ -30,8 +30,11 @@
       <file leaf-file-name="test_chessdesk.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_chessdesk.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+            <state relative-caret-position="495">
+              <caret line="33" column="54" lean-forward="true" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,9 +51,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test_chessdesk.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/chessdesk.py" />
+        <option value="$PROJECT_DIR$/test_chessdesk.py" />
       </list>
     </option>
   </component>
@@ -90,8 +93,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.selected.package.stylelint" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -110,7 +118,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test_chessdesk.TestChessdesk.test_given_args_not_nums">
+  <component name="RunManager" selected="Python tests.Unittests in test_chessdesk.py">
     <configuration name="chessdesk" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="chessdesk" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -200,11 +208,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests in test_chessdesk.py" />
         <item itemvalue="Python tests.Unittests for test_chessdesk.TestChessdesk.test_given_args_not_nums" />
         <item itemvalue="Python.chessdesk" />
         <item itemvalue="Python tests.Unittests for test_chessdesk.TestChessdesk" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python tests.Unittests in test_chessdesk.py" />
       </list>
     </recent_temporary>
   </component>
@@ -222,39 +230,40 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_chessdesk_py - 2019.05.02 at 00h 53m 14s.xml">
+    <history-entry file="Unittests_in_test_chessdesk_py - 2019.05.05 at 23h 31m 25s.xml">
       <configuration name="Unittests in test_chessdesk.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_chessdesk_py - 2019.05.02 at 00h 54m 56s.xml">
+    <history-entry file="Unittests_in_test_chessdesk_py - 2019.05.05 at 23h 33m 17s.xml">
       <configuration name="Unittests in test_chessdesk.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_chessdesk_TestChessdesk - 2019.05.02 at 01h 20m 52s.xml">
-      <configuration name="Unittests for test_chessdesk.TestChessdesk" configurationId="tests" />
+    <history-entry file="Unittests_in_test_chessdesk_py - 2019.05.05 at 23h 33m 31s.xml">
+      <configuration name="Unittests in test_chessdesk.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_chessdesk_TestChessdesk - 2019.05.03 at 10h 40m 05s.xml">
-      <configuration name="Unittests for test_chessdesk.TestChessdesk" configurationId="tests" />
+    <history-entry file="Unittests_in_test_chessdesk_py - 2019.05.05 at 23h 34m 28s.xml">
+      <configuration name="Unittests in test_chessdesk.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_chessdesk_TestChessdesk - 2019.05.03 at 10h 40m 48s.xml">
-      <configuration name="Unittests for test_chessdesk.TestChessdesk" configurationId="tests" />
+    <history-entry file="Unittests_in_test_chessdesk_py - 2019.05.05 at 23h 34m 38s.xml">
+      <configuration name="Unittests in test_chessdesk.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_chessdesk_TestChessdesk - 2019.05.03 at 10h 50m 40s.xml">
-      <configuration name="Unittests for test_chessdesk.TestChessdesk" configurationId="tests" />
+    <history-entry file="Unittests_in_test_chessdesk_py - 2019.05.05 at 23h 35m 45s.xml">
+      <configuration name="Unittests in test_chessdesk.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_chessdesk_TestChessdesk - 2019.05.03 at 10h 53m 42s.xml">
-      <configuration name="Unittests for test_chessdesk.TestChessdesk" configurationId="tests" />
+    <history-entry file="Unittests_in_test_chessdesk_py - 2019.05.05 at 23h 36m 37s.xml">
+      <configuration name="Unittests in test_chessdesk.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_chessdesk_TestChessdesk_test_given_args_not_nums - 2019.05.03 at 11h 01m 56s.xml">
-      <configuration name="Unittests for test_chessdesk.TestChessdesk.test_given_args_not_nums" configurationId="tests" />
+    <history-entry file="Unittests_in_test_chessdesk_py - 2019.05.05 at 23h 36m 48s.xml">
+      <configuration name="Unittests in test_chessdesk.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_chessdesk_TestChessdesk_test_given_args_not_nums - 2019.05.03 at 11h 05m 21s.xml">
-      <configuration name="Unittests for test_chessdesk.TestChessdesk.test_given_args_not_nums" configurationId="tests" />
+    <history-entry file="Unittests_in_test_chessdesk_py - 2019.05.05 at 23h 37m 25s.xml">
+      <configuration name="Unittests in test_chessdesk.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_chessdesk_TestChessdesk_test_given_args_not_nums - 2019.05.03 at 11h 06m 08s.xml">
-      <configuration name="Unittests for test_chessdesk.TestChessdesk.test_given_args_not_nums" configurationId="tests" />
+    <history-entry file="Unittests_in_test_chessdesk_py - 2019.05.05 at 23h 40m 10s.xml">
+      <configuration name="Unittests in test_chessdesk.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="28" width="1688" height="976" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32979977" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
@@ -263,20 +272,20 @@
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32979977" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.34157833" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32979977" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23504274" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23748474" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32979977" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39929327" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32979977" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,6 +300,23 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/chessdesk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_chessdesk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chessdesk.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -328,19 +354,44 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py" />
+    <entry file="file:///usr/lib/python3.7/unittest/mock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="1203" selection-start-line="1203" selection-end-line="1203" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_chessdesk.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+        <state relative-caret-position="495">
+          <caret line="33" column="54" lean-forward="true" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chessdesk.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="570">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
