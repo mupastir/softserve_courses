@@ -1,5 +1,4 @@
 import io
-import unittest
 import unittest.mock
 from chessdesk import ChessDesk
 

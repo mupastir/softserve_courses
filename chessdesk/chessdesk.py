@@ -2,6 +2,7 @@ from typing import List
 
 
 class ChessDesk:
+
     print_symbols: List[str]
 
     def __init__(self, height=None, weight=None):
