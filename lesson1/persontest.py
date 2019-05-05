@@ -22,7 +22,7 @@ class PersonTest:
 
     def calctime(self, start_time: dict, end_time: dict):
         """
-        Function calculate how many time was spent to pass test in
+        Function calculate how many time was spent to pass test
         :param start_time: {'hh':12, 'mm':20}
         :param end_time: {'hh':13, 'mm':17}
         :return: {'hh':0, 'mm':57}

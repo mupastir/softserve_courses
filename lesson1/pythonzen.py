@@ -6,7 +6,6 @@ class PythonZen:
     def __init__(self):
         self.string_zen = s
         self.zen_in_string = self.zen_to_string(self.get_decode_zen())
-        self.find_occurrences()
         self.better, self.never, self.is_times = self.find_occurrences()
         self.zen_upper = self.zen_in_string.upper()
         self.print_result()
