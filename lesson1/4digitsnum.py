@@ -18,8 +18,3 @@ class FourDigitsNum:
         print('Our number in reverse order: {}'.format(self.number[::-1]),
               end='\n\n')
         print('Sorted digits in number: {}'.format(self.sorted_number))
-
-
-if __name__ == "__main__":
-    test = FourDigitsNum(54648)
-    test()
