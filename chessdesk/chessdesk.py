@@ -8,15 +8,18 @@ class ChessDesk:
     def __init__(self, height=None, weight=None):
         self.height, self.weight = height, weight
         self.print_symbols = ['*', ' ']
-        self.info_string = "There didn't put numbers, please enter to " \
+        self.INFO_STRING = "There didn't put numbers, please enter to " \
                            "create square desk HEIGHT.\n" \
                            "To create rectangular desk " \
                            "enter first HEIGHT and second WEIGHT. "
         if self.are_normal_args():
             self.desk = self.built_desk()
-            print(self.desk, end='')
         else:
-            print(self.info_string, end='')
+            self.desk = self.INFO_STRING
+        self.__repr__()
+
+    def __repr__(self):
+        print(self.desk, end='')
 
     def are_normal_args(self) -> bool:
         if self.weight is None:
