@@ -4,6 +4,7 @@ class TrianglesList:
         self.template_data = self.get_header(params_string)
         self.data = self.get_data(params_string)
         self.append_squares()
+        self.is_exist_triangle()
         self.__repr__()
 
     def get_header(self, params):
@@ -21,6 +22,17 @@ class TrianglesList:
     def append_squares(self):
         for e in self.data:
             e['square'] = self.calculate_squares(e)
+
+    def is_exist_triangle(self):
+        for e in self.data:
+            try:
+                e['square'] = float(e['square'])
+                if e['square'] == 0.0:
+                    raise TypeError
+            except TypeError:
+                print(f'Triangle {e["name"]} can\'t exist')
+                self.data.remove(e)
+                return self.is_exist_triangle()
 
     def calculate_squares(self, values_dict):
         """
