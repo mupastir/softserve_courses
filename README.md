@@ -1,4 +1,4 @@
-# There publics Elementaries' tasks and hometasks
+# There Elementaries' tasks and hometasks are public
 Elementary first - chessdesk
 
 Elementary second - envelopanalysis
