@@ -53,7 +53,3 @@ class EnvelopAnalysis:
                  'calculation enter "y" or "yes": ').lower() == ('y' or 'yes'):
             EnvelopAnalysis()
         return
-
-
-if __name__ == "__main__":
-    EnvelopAnalysis()
