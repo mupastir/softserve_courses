@@ -63,7 +63,7 @@ class NumberRecord:
     def units(self, unit: int):
         if len(self.record) > 2 and unit == 1:
             unit_list = [unit, "одна"]
-        elif len(self.record) > 2 and unit == 2:
+        elif unit == 2:
             unit_list = [unit, "две"]
         elif unit == 0:
             unit_list = [unit, ""]
@@ -74,13 +74,12 @@ class NumberRecord:
     def tens(self, units: list):
         digit_to_check = self.get_digit()
         if digit_to_check == 0:
-            self.record.insert(0, units[1])
+            self.record.insert(0, self.ELEMENTARY[units[0]])
         elif digit_to_check == 1 and units[0] == 0:
             self.record.insert(0, self.UNITS[10])
-        elif digit_to_check == 1 and units[0] == 2:
-            self.record.insert(0, self.UNITS[12])
-        elif digit_to_check == 1 and units[0] == 3:
-            self.record.insert(0, self.UNITS[13])
+        elif digit_to_check == 1 and units[0] < 4:
+            self.record.insert(0, units[1] +
+                               self.UNITS['suffix under 20'])
         elif digit_to_check == 1:
             self.record.insert(0, units[1][:-1] +
                                self.UNITS['suffix under 20'])
