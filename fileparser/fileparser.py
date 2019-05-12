@@ -13,8 +13,8 @@ class FileParser:
             self.count_occurrences()
             self.__repr__()
         else:
-            self.string_to_search = str(string_to_count)
-            self.string_to_replace = str(string_to_replace)
+            self.string_to_search = string_to_count
+            self.string_to_replace = string_to_replace
             self.replace_string()
 
     def __repr__(self):
