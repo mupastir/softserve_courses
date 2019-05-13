@@ -8,16 +8,22 @@ class EnvelopAnalysis:
                         "2 - d-size\n\n"
         self.ERR_MSG = "There were put not numbers!"
         self.result_msg = 'Envelope can be enclosed!\n'
+        self.first_envelop, self.second_envelop = [(), ()]
+
+    def main(self):
         print(self.INFO_MSG, end='')
         self.first_envelop, self.second_envelop = self.input_sides()
-        if self.are_normal_args():
-            if self.is_enclosed():
-                print(self.result_msg)
-            else:
-                print(self.result_msg.replace('can', 'can\'t'))
-        else:
-            print(self.ERR_MSG)
+        self.check_data(self.first_envelop, self.second_envelop)
         self.ask_restart()
+
+    def check_data(self, first_envelop, second_envelop):
+        if self.are_normal_args(first_envelop, second_envelop):
+            if self.is_enclosed(first_envelop, second_envelop):
+                print(self.result_msg, end='')
+            else:
+                print(self.result_msg.replace('can', 'can\'t'), end='')
+        else:
+            print(self.ERR_MSG, end='')
 
     def input_sides(self):
         sides = ('A', 'B')
@@ -26,25 +32,23 @@ class EnvelopAnalysis:
                  for s in sides]
                 for e in range(envelops)]
 
-    def are_normal_args(self) -> bool:
+    def are_normal_args(self, first_envelop, second_envelop) -> bool:
         try:
-            float(self.first_envelop[0]), float(self.first_envelop[1])
-            float(self.second_envelop[0]), float(self.second_envelop[1])
+            float(first_envelop[0]), float(first_envelop[1])
+            float(second_envelop[0]), float(second_envelop[1])
         except (ValueError, TypeError):
             return False
         else:
             return True
 
-    def is_enclosed(self):
-        vertical_enclosed = \
-            min(self.first_envelop) > max(self.second_envelop) or \
-            min(self.second_envelop) > max(self.first_envelop)
-        horizontal_enclosed = \
-            min(self.first_envelop) > min(self.second_envelop) and \
-            max(self.first_envelop) > max(self.second_envelop) or \
-            min(self.second_envelop) > min(self.first_envelop) and \
-            max(self.second_envelop) > max(self.first_envelop)
-        if vertical_enclosed or horizontal_enclosed:
+    def is_enclosed(self, first_envelop, second_envelop):
+        enclosed = \
+            min(first_envelop) > min(second_envelop) and \
+            max(first_envelop) > max(second_envelop) \
+            or \
+            min(second_envelop) > min(first_envelop) and \
+            max(second_envelop) > max(first_envelop)
+        if enclosed:
             return True
         return False
 
