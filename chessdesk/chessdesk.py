@@ -22,15 +22,15 @@ class ChessDesk:
     def __repr__(self):
         print(self.desk, end='')
 
-    class SmallValues(Exception):
-        self.weight < 2 or self.height < 2
-
-    def are_normal_args(self, func) -> bool:
+    def are_normal_args(self) -> bool:
         if self.weight is None:
             self.weight = self.height
         try:
-            int(self.height), int(self.weight)
-        except (ValueError, TypeError, SmallValues):
+            self.height, self.weight = int(round(self.height)), \
+                                       int(round(self.weight))
+            if self.weight < 2 or self.height < 2:
+                raise ValueError
+        except (ValueError, TypeError):
             return False
         else:
             return True
