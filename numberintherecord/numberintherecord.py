@@ -43,7 +43,6 @@ class NumberRecord:
                 self._append_thousand_name()
                 self._transform_basic_third()
         self.record = self._list_to_string(self.record)
-        print(self.record)
         return self.record
 
     @staticmethod
@@ -105,4 +104,5 @@ class NumberRecord:
 
 
 if __name__ == "__main__":
-    NumberRecord(555666)
+    a = NumberRecord(555666)
+    print(a)
