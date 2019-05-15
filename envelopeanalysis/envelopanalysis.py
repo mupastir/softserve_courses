@@ -42,7 +42,8 @@ class EnvelopAnalysis:
     def __repr__(self):
         return self.result_msg
 
-    def _are_normal_args(self, first_envelop, second_envelop) -> bool:
+    @staticmethod
+    def _are_normal_args(first_envelop, second_envelop) -> bool:
         try:
             float(first_envelop[0]), float(first_envelop[1])
             float(second_envelop[0]), float(second_envelop[1])
