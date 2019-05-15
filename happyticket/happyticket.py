@@ -15,7 +15,7 @@ def get_tickets_from_file() -> list:
     return tickets_list
 
 
-def is_existence_file(filepath):
+def is_existence_file(filepath) -> bool:
     try:
         f = open(filepath)
         f.close()
@@ -38,28 +38,28 @@ class HappyTicket:
         self._happy_tickets = 0
         self._result = ''
 
-    def main(self):
+    def main(self) -> str:
         for ticket in self._tickets:
             self._start(ticket)
         self._result = f'There are {self._happy_tickets} ' \
                        f'happy {self._mode.lower()} tickets'
         return self._result
 
-    def moscow_mode(self, ticket: str):
+    def moscow_mode(self, ticket: str) -> int:
         if self._is_valid(ticket):
             ticket = str(abs(int(ticket)))
             if self._is_happy_moscow(ticket):
                 self._happy_tickets += 1
             return self._happy_tickets
 
-    def peter_mode(self, ticket: str):
+    def peter_mode(self, ticket: str) -> int:
         if self._is_valid(ticket):
             ticket = str(abs(int(ticket)))
             if self._is_happy_peter(ticket):
                 self._happy_tickets += 1
             return self._happy_tickets
 
-    def _is_mode(self):
+    def _is_mode(self) -> bool:
         try:
             self.MODES[self._mode.lower()]
         except KeyError:
@@ -97,7 +97,7 @@ class HappyTicket:
         else:
             return False
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return self._result
 
 
