@@ -34,9 +34,10 @@ class HappyTicket:
         self._mode = mode
         if self._is_mode:
             self._start = self.MODES[self._mode.lower()]
-        self._tickets = tickets
-        self._happy_tickets = 0
-        self._result = ''
+            self._tickets = tickets
+            self._happy_tickets = 0
+            self._result = ''
+            self.main()
 
     def main(self) -> str:
         for ticket in self._tickets:
@@ -105,14 +106,11 @@ if __name__ == "__main__":
     tickets = get_tickets_from_file()
     mode = input("Enter mode: ")
 
-    I = HappyTicket(tickets, mode)
-    I.main()
-    print(I)
+    Input = HappyTicket(tickets, mode)
+    print(Input)
 
     M = HappyTicket(['253145', 'd626', '111111'], 'MoskoW')
-    M.main()
     print(M)
 
     P = HappyTicket(['121358', 'd626', '278561'], 'pIteR')
-    P.main()
     print(P)

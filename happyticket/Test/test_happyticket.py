@@ -5,14 +5,18 @@ from happyticket import is_existence_file
 
 class TestHappyTicket(unittest.TestCase):
 
+    def setUp(self):
+        self.peter = HappyTicket(['121358', '278561'], 'pIteR')
+        self.moscow = HappyTicket(['253145', '111111'], 'MoskoW')
+        self.non_digit_ticket = HappyTicket(['1213dvdf'], 'pIteR')
+        self.not_six_digit_len = HappyTicket(['1213'], 'pIteR')
+
     def test_peter(self):
-        peter = HappyTicket(['121358', '278561'], 'pIteR')
-        self.assertEqual(peter.main(),
+        self.assertEqual(str(self.peter),
                          'There are 1 happy piter tickets')
 
     def test_moscow(self):
-        moscow = HappyTicket(['253145', '111111'], 'MoskoW')
-        self.assertEqual(moscow.main(),
+        self.assertEqual(str(self.moscow),
                          'There are 2 happy moskow tickets')
 
     def test_not_existence_file(self):
@@ -24,12 +28,10 @@ class TestHappyTicket(unittest.TestCase):
                           HappyTicket([], 'moscaw'))
 
     def test_non_digits_ticket(self):
-        non_digits_ticket = HappyTicket(['1213dvdf'], 'pIteR')
-        self.assertRaises(TypeError, non_digits_ticket.main())
+        self.assertRaises(TypeError, self.non_digit_ticket)
 
     def test_not_six_digit_len(self):
-        not_six_digit_len = HappyTicket(['1213'], 'pIteR')
-        self.assertRaises(ValueError, not_six_digit_len.main())
+        self.assertRaises(ValueError, self.not_six_digit_len)
 
 
 if __name__ == "__main__":
