@@ -6,8 +6,11 @@ class NumberSequence:
 
     def __init__(self, end_number):
         self._end_number = end_number
-        self._result_sequence = []
+        self._result_sequence = ''
         self.build_sequence()
+
+    def __repr__(self):
+        return self._result_sequence
 
     def build_sequence(self):
         if self._is_number_valid():
@@ -24,8 +27,7 @@ class NumberSequence:
 
     def _is_number_valid(self):
         try:
-            float(self._end_number)
-            if float(self._end_number) <= 1:
+            if self._end_number <= 1:
                 raise ValueError
         except ValueError:
             print(ERR_MSG['value'])
@@ -38,5 +40,5 @@ class NumberSequence:
 
 
 if __name__ == "__main__":
-    A = NumberSequence('str').build_sequence()
-    # print(A)
+    A = NumberSequence(0.9)
+    print(A)

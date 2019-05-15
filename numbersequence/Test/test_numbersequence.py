@@ -2,21 +2,19 @@ import unittest
 from numbersequence import NumberSequence
 
 
-class TestHappyTicket(unittest.TestCase):
+class TestNumberSequence(unittest.TestCase):
 
     def test_norm_args(self):
-        seq = NumberSequence(90.01)
-        self.assertEqual(seq.build_sequence(),
+        self.assertEqual(str(NumberSequence(90.01)),
                          '1, 2, 3, 4, 5, 6, 7, 8, 9')
 
-    def test_non_number_args(self):
-        seq = NumberSequence('str')
-        self.assertRaises(FileNotFoundError,
-                          is_existence_file('smth_not_existence'))
+    def test_less_one(self):
+        self.assertRaises(TypeError,
+                          NumberSequence(-0.9))
 
-    def test_not_correct_mode(self):
-        self.assertRaises(KeyError,
-                          HappyTicket([], 'moscaw'))
+    def test_non_numbers(self):
+        self.assertRaises(TypeError,
+                          NumberSequence('str'))
 
 
 if __name__ == "__main__":
