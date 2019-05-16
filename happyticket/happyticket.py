@@ -31,12 +31,12 @@ class HappyTicket:
     def __init__(self, tickets: list, mode: str):
         self.MODES = {"moskow": self.moscow_mode,
                       "piter": self.peter_mode}
-        self._mode = mode
+        self._mode = mode.lower()
         self._tickets = tickets
         self._happy_tickets = 0
         self._result = ''
-        if self._is_mode:
-            self._start = self.MODES[self._mode.lower()]
+        if self._is_mode():
+            self._start = self.MODES[self._mode]
             self.main()
 
     def main(self) -> str:
@@ -61,7 +61,7 @@ class HappyTicket:
 
     def _is_mode(self) -> bool:
         try:
-            self.MODES[self._mode.lower()]
+            self.MODES[self._mode]
         except KeyError:
             print(ERR_MSG['mode'])
         else:
@@ -107,5 +107,5 @@ if __name__ == "__main__":
     M = HappyTicket(['253145', 'd626', '111111'], 'MoskoW')
     print(M)
 
-    P = HappyTicket(['121358', 'd626', '278561'], 'pIteR')
+    P = HappyTicket(['121358', '626', '278561'], 'pIteR')
     print(P)
