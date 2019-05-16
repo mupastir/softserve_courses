@@ -25,13 +25,13 @@ class TestHappyTicket(unittest.TestCase):
 
     def test_not_correct_mode(self):
         self.assertRaises(KeyError,
-                          HappyTicket([], 'moscaw'))
+                          HappyTicket([], 'moscaw').main())
 
     def test_non_digits_ticket(self):
-        self.assertRaises(TypeError, self.non_digit_ticket)
+        self.assertRaises(TypeError, self.non_digit_ticket.main())
 
     def test_not_six_digit_len(self):
-        self.assertRaises(ValueError, self.not_six_digit_len)
+        self.assertRaises(ValueError, self.not_six_digit_len.main())
 
 
 if __name__ == "__main__":

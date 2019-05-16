@@ -71,14 +71,12 @@ class HappyTicket:
     @staticmethod
     def _is_valid(ticket) -> bool:
         try:
-            int(ticket)
             if len(str(abs(int(ticket)))) != 6:
                 raise ValueError
         except (ValueError, TypeError):
             print(ticket, ERR_MSG['ticket'])
             return False
-        else:
-            return True
+        return True
 
     @staticmethod
     def _is_happy_moscow(ticket) -> bool:
@@ -86,8 +84,7 @@ class HappyTicket:
         second_part = [int(d) for d in ticket[3:]]
         if sum(first_part) == sum(second_part):
             return True
-        else:
-            return False
+        return False
 
     @staticmethod
     def _is_happy_peter(ticket) -> bool:
@@ -95,8 +92,7 @@ class HappyTicket:
         odd_digits = sum([int(d) for d in ticket if int(d) % 2 == 1])
         if even_digits == odd_digits:
             return True
-        else:
-            return False
+        return False
 
     def __repr__(self) -> str:
         return self._result
