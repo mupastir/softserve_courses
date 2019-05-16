@@ -32,11 +32,11 @@ class HappyTicket:
         self.MODES = {"moskow": self.moscow_mode,
                       "piter": self.peter_mode}
         self._mode = mode
+        self._tickets = tickets
+        self._happy_tickets = 0
+        self._result = ''
         if self._is_mode:
             self._start = self.MODES[self._mode.lower()]
-            self._tickets = tickets
-            self._happy_tickets = 0
-            self._result = ''
             self.main()
 
     def main(self) -> str:
