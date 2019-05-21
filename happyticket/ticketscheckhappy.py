@@ -1,9 +1,27 @@
 import os.path
 
-ERR_MSG = {"ticket": "Size ticket not equal 6 or there were put not digits!",
+ERR_MSG = {"ticket": "Size one of the "
+                     "ticket not equal 6 or there were put not digits!",
            "mode": 'It was put not correct mode! There are only "Moskow" '
                    'and "Piter"',
            "file": 'File does not exist'}
+
+
+def main():
+    try:
+        tickets = get_tickets_from_file()
+        mode = input("Enter mode: ")
+        tickets = TicketsCheckHappy(tickets, mode)
+        print(tickets.main())
+    except FileNotFoundError:
+        print(ERR_MSG["file"])
+        main()
+    except KeyError:
+        print(ERR_MSG["mode"])
+        main()
+    except ValueError:
+        print(ERR_MSG["ticket"])
+        main()
 
 
 def get_tickets_from_file() -> list:
@@ -17,29 +35,26 @@ def get_tickets_from_file() -> list:
 
 
 def existence_file(filepath):
-    if os.path.isfile(filepath):
-        pass
-    else:
-        raise FileNotFoundError(ERR_MSG["file"])
+    if not os.path.isfile(filepath):
+        raise FileNotFoundError
 
 
-class HappyTicket:
+class TicketsCheckHappy:
 
     def __init__(self, tickets: list, mode: str):
         self.MODES = {"moskow": self.moscow_mode,
                       "piter": self.peter_mode}
         self._mode = mode.lower()
+        self._valid_mode()
         self._tickets = tickets
+        self._valid_tickets()
         self._happy_tickets = 0
         self._result = ''
-        self._mode_valid()
-        self._valid_tickets()
-        self._start = self.MODES[self._mode]
-        self.main()
+        self._start_mode = self.MODES[self._mode]
 
     def main(self) -> str:
         for ticket in self._tickets:
-            self._start(ticket)
+            self._start_mode(ticket)
         self._result = f'There are {self._happy_tickets} ' \
                        f'happy {self._mode.lower()} tickets'
         return self._result
@@ -56,17 +71,13 @@ class HappyTicket:
             self._happy_tickets += 1
         return self._happy_tickets
 
-    def _mode_valid(self):
-        if self._mode in self.MODES:
-            pass
-        else:
+    def _valid_mode(self):
+        if self._mode not in self.MODES:
             raise KeyError(ERR_MSG['mode'])
 
     def _valid_tickets(self):
         for ticket in self._tickets:
-            if len(ticket) == 6 and ticket.isnumeric():
-                pass
-            else:
+            if len(ticket) != 6 or not ticket.isnumeric():
                 raise ValueError(f'{ticket} {ERR_MSG["ticket"]}')
 
     @staticmethod
@@ -90,14 +101,10 @@ class HappyTicket:
 
 
 if __name__ == "__main__":
-    tickets = get_tickets_from_file()
-    mode = input("Enter mode: ")
+    main()
 
-    Input = HappyTicket(tickets, mode)
-    print(Input)
+    M = TicketsCheckHappy(['253145', '545626', '111111'], 'MoskoW')
+    print(M.main())
 
-    M = HappyTicket(['253145', '545626', '111111'], 'MoskoW')
-    print(M)
-
-    P = HappyTicket(['121358', '278561'], 'pIteR')
-    print(P)
+    P = TicketsCheckHappy(['121358', '278561'], 'pIteR')
+    print(P.main())

@@ -1,19 +1,19 @@
 import unittest
-from happyticket import *
+from ticketscheckhappy import *
 
 
 class TestHappyTicket(unittest.TestCase):
 
     def setUp(self):
-        self.peter = HappyTicket(['121358', '278561'], 'pIteR')
-        self.moscow = HappyTicket(['253145', '111111'], 'MoskoW')
+        self.peter = TicketsCheckHappy(['121358', '278561'], 'pIteR')
+        self.moscow = TicketsCheckHappy(['253145', '111111'], 'MoskoW')
 
     def test_peter(self):
-        self.assertEqual(str(self.peter),
+        self.assertEqual(str(self.peter.main()),
                          'There are 1 happy piter tickets')
 
     def test_moscow(self):
-        self.assertEqual(str(self.moscow),
+        self.assertEqual(str(self.moscow.main()),
                          'There are 2 happy moskow tickets')
 
     def test_non_existence_file(self):
@@ -21,13 +21,13 @@ class TestHappyTicket(unittest.TestCase):
                           existence_file, 'smth_not_existence')
 
     def test_non_correct_mode(self):
-        self.assertRaises(KeyError, HappyTicket, ['121358'], 'moscaw')
+        self.assertRaises(KeyError, TicketsCheckHappy, ['121358'], 'moscaw')
 
     def test_non_digits_ticket(self):
-        self.assertRaises(ValueError, HappyTicket, ['1213dvdf'], 'pIteR')
+        self.assertRaises(ValueError, TicketsCheckHappy, ['1213dvdf'], 'pIteR')
 
     def test_non_six_digit_len(self):
-        self.assertRaises(ValueError, HappyTicket, ['12'], 'pIteR')
+        self.assertRaises(ValueError, TicketsCheckHappy, ['12'], 'pIteR')
 
 
 if __name__ == "__main__":
