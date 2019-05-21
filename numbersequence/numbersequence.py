@@ -13,10 +13,10 @@ class NumberSequence:
         return self._result_sequence
 
     def build_sequence(self):
-        if self._is_number_valid():
-            self._result_sequence = self.sequence_append(self._end_number)
-            self._result_sequence = ', '.join(map(str, self._result_sequence))
-            return self._result_sequence
+        self._number_valid()
+        self._result_sequence = self.sequence_append(self._end_number)
+        self._result_sequence = ', '.join(map(str, self._result_sequence))
+        return self._result_sequence
 
     @staticmethod
     def sequence_append(end_square_number):
@@ -25,18 +25,13 @@ class NumberSequence:
             yield member_of_sequence
             member_of_sequence += 1
 
-    def _is_number_valid(self):
-        try:
+    def _number_valid(self):
+        if isinstance(self._end_number, float) or \
+                isinstance(self._end_number, int):
             if self._end_number <= 1:
-                raise ValueError
-        except ValueError:
-            print(ERR_MSG['value'])
-            return False
-        except TypeError:
-            print(ERR_MSG['type'])
-            return False
+                raise ValueError(ERR_MSG['value'])
         else:
-            return True
+            raise TypeError(ERR_MSG['type'])
 
 
 if __name__ == "__main__":

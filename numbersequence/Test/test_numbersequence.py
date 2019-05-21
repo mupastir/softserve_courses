@@ -9,12 +9,12 @@ class TestNumberSequence(unittest.TestCase):
                          '1, 2, 3, 4, 5, 6, 7, 8, 9')
 
     def test_less_one(self):
-        self.assertRaises(TypeError,
-                          NumberSequence(-0.9))
+        self.assertRaises(ValueError,
+                          NumberSequence, -0.9)
 
     def test_non_numbers(self):
         self.assertRaises(TypeError,
-                          NumberSequence('str'))
+                          NumberSequence, 'str')
 
 
 if __name__ == "__main__":
