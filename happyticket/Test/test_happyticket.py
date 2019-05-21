@@ -1,6 +1,5 @@
 import unittest
-from happyticket import HappyTicket
-from happyticket import is_existence_file
+from happyticket import *
 
 
 class TestHappyTicket(unittest.TestCase):
@@ -19,16 +18,16 @@ class TestHappyTicket(unittest.TestCase):
 
     def test_non_existence_file(self):
         self.assertRaises(FileNotFoundError,
-                          is_existence_file, 'smth_not_existence')
+                          existence_file, 'smth_not_existence')
 
     def test_non_correct_mode(self):
-        self.assertRaises(KeyError, HappyTicket(['121358'], 'moscaw'))
+        self.assertRaises(KeyError, HappyTicket, ['121358'], 'moscaw')
 
     def test_non_digits_ticket(self):
-        self.assertRaises(TypeError, HappyTicket(['1213dvdf'], 'pIteR'))
+        self.assertRaises(ValueError, HappyTicket, ['1213dvdf'], 'pIteR')
 
     def test_non_six_digit_len(self):
-        self.assertRaises(ValueError, HappyTicket(['1213'], 'pIteR'))
+        self.assertRaises(ValueError, HappyTicket, ['12'], 'pIteR')
 
 
 if __name__ == "__main__":
