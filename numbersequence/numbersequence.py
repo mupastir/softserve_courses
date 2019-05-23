@@ -2,18 +2,33 @@ ERR_MSG = {'value': 'There aren\'t numbers less then square of 1',
            'type': 'There was put not number!'}
 
 
+def main():
+    try:
+        number_to_build = input('Enter number to which '
+                                'square build sequence: ')
+        if number_to_build.replace('.', '').isnumeric():
+            number_to_build = float(number_to_build)
+        example_sequence = NumberSequence(number_to_build).build_sequence()
+        print(example_sequence)
+    except ValueError:
+        print(ERR_MSG["value"])
+        main()
+    except TypeError:
+        print(ERR_MSG["type"])
+        main()
+
+
 class NumberSequence:
 
     def __init__(self, end_number):
         self._end_number = end_number
+        self._number_valid()
         self._result_sequence = ''
-        self.build_sequence()
 
     def __repr__(self):
         return self._result_sequence
 
     def build_sequence(self):
-        self._number_valid()
         self._result_sequence = self.sequence_append(self._end_number)
         self._result_sequence = ', '.join(map(str, self._result_sequence))
         return self._result_sequence
@@ -21,7 +36,7 @@ class NumberSequence:
     @staticmethod
     def sequence_append(end_square_number):
         member_of_sequence = 1
-        while member_of_sequence**2 < end_square_number:
+        while member_of_sequence ** 2 < end_square_number:
             yield member_of_sequence
             member_of_sequence += 1
 
@@ -35,5 +50,4 @@ class NumberSequence:
 
 
 if __name__ == "__main__":
-    A = NumberSequence(0.9)
-    print(A)
+    main()
