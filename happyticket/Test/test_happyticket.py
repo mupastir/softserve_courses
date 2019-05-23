@@ -9,11 +9,11 @@ class TestHappyTicket(unittest.TestCase):
         self.moscow = TicketsCheckHappy(['253145', '111111'], 'MoskoW')
 
     def test_peter(self):
-        self.assertEqual(str(self.peter.main()),
+        self.assertEqual(str(self.peter.count_happy_tickets()),
                          'There are 1 happy piter tickets')
 
     def test_moscow(self):
-        self.assertEqual(str(self.moscow.main()),
+        self.assertEqual(str(self.moscow.count_happy_tickets()),
                          'There are 2 happy moskow tickets')
 
     def test_non_existence_file(self):
