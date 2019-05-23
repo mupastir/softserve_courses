@@ -10,11 +10,8 @@ def main():
             number_to_build = float(number_to_build)
         example_sequence = NumberSequence(number_to_build).build_sequence()
         print(example_sequence)
-    except ValueError:
-        print(ERR_MSG["value"])
-        main()
-    except TypeError:
-        print(ERR_MSG["type"])
+    except Exception as e:
+        print(str(e))
         main()
 
 
