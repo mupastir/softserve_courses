@@ -20,7 +20,8 @@ class TestFiboRange(unittest.TestCase):
     def test_mixed_args(self):
         self.assertEqual(self.mixed.build_sequence(),
                          [-21, 13, -8, 5, -3, 2, -1, 1,
-                          0, 1, 1, 2, 3, 5, 8, 13, 21])
+                          0, 1, 1, 2, 3, 5, 8, 13,
+                          21])
 
 
 if __name__ == "__main__":
